@@ -1,0 +1,164 @@
+﻿<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="google.ico" rel="shortcut icon">
+    <title>Search</title>
+    <style>
+        .body0 {
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+        
+        .body1 {
+            background: url("start.jpg");
+            background-color: white;
+            background-position: left bottom;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
+        .body2 {
+            background: url("start.jpg");
+            background-color: white;
+            background-position: right bottom;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
+        .body3 {
+            background: url("start.jpg");
+            background-color: white;
+            background-position: left bottom;
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+            background-attachment: fixed;
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
+        .body4 {
+            background: url("start.jpg");
+            background-color: white;
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+            background-attachment: fixed;
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
+        .body5 {
+            background: url("start.jpg");
+            background-color: white;
+            background-position: right bottom;
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+            background-attachment: fixed;
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
+        .bar {
+            width: 640px;
+            padding-top: 240px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 0px;
+        }
+
+        .s_ipt {
+            width: 300px;
+            height: 36px;
+            transition-timing-function: ease;
+            transition: width 0.2s;
+            margin-left: 110px;
+            margin-bottom: 5px;
+            border-radius: 6px;
+            background-color: rgba(255,255,255,0.6);
+            display: inline-block;
+            zoom: 1;
+            border: 2px solid rgba(0,183,195,0.6);
+            text-align: center;
+            font-size: 18px;
+            float: left;
+        }
+
+        .btn {
+            cursor: pointer;
+            width: 120px;
+            height: 36px;
+            margin-left: 2px;
+            margin-bottom: 6px;
+            line-height: 38px;
+            border: 0;
+            border-radius: 6px;
+            background: none;
+            opacity: 0.8;
+            color: #fff;
+            background-color: #00b7c3;
+            font-size: 16px;
+            color: white;
+            float: left;
+        }
+
+            .btn:hover {
+                height: 36px;
+                color: #fff;
+                background-color: #ef00a9;
+                border: 0;
+            }
+
+            .btn:active {
+                height: 36px;
+                color: #fff;
+                background-color: #bf0089;
+                border: 0;
+            }
+    </style>
+</head>
+<body id="ldsBody" class="body0">
+
+    <div class="bar">
+        <!-- Search Baidu -->
+        <form method="get" action="https://www.baidu.com/baidu" target="_self">
+            <a href="https://www.baidu.com/"></a>
+            <input class="s_ipt" id="baidu" type="text" name="word" maxlength="100" autocomplete="off">
+            <input class="btn" type="submit" value="Baidu">
+        </form>
+        <!-- Search Baidu -->
+        <!-- Search Google -->
+        <form method="get" action="https://www.google.com/search" target="_top">
+            <a href="https://www.google.com/"></a>
+            <input class="s_ipt" id="google" type="text" name="q" maxlength="100" autocomplete="off">
+            <input class="btn" type="submit" value="Google">
+        </form>
+        <!-- Search Google -->
+    </div>
+
+    <script type="text/javascript">
+    /**/
+        window.onload = function () {
+            document.getElementById("baidu").focus();
+            var number = Math.random();
+            number = Math.ceil(number * 5);//生成1到2的随机数
+            if (number == 1) {
+                document.getElementById("ldsBody").className = "body1";
+            } else if (number == 2) {
+                document.getElementById("ldsBody").className = "body2";
+            } else if (number == 3) {
+                document.getElementById("ldsBody").className = "body3";
+            } else if (number == 4) {
+                document.getElementById("ldsBody").className = "body4";
+            } else {
+                document.getElementById("ldsBody").className = "body5";
+            }
+        }
+     
+    </script>
+
+</body>
+</html>
